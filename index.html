@@ -7,6 +7,7 @@
     <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
     <script src="https://unpkg.com/aframe-look-at-component@0.8.0/dist/aframe-look-at-component.min.js"></script>
     <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar-nft.js"></script>
+    <script src="./script.js" type="text/javascript"
   </head>
 
   <body style="margin: 0; overflow: hidden;">
@@ -15,20 +16,6 @@
       embedded
       arjs="sourceType: webcam; debugUIEnabled: false;"
     >
-      <a-text
-        value="This content will always face you."
-        look-at="[gps-camera]"
-        scale="120 120 120"
-        gps-entity-place="latitude: 37.192328719543625; longitude: -3.6166337388255263;"
-      ></a-text>
-      <a-entity gltf-model="./articuno/scene.gltf" rotation="0 180 0" 
-      scale="0.15 0.15 0.15" gps-entity-place="longitude: 37.1919859390095; latitude: -3.617169443892168;" animation-mixer/>
-
-      <a-entity gltf-model="./magnemite/scene.gltf" rotation="0 180 0" 
-      scale="0.15 0.15 0.15" gps-entity-place="longitude: 37.192328719543625; latitude: -3.6166337388255263;" animation-mixer/>
-
-      <a-entity gltf-model="./dragonite/scene.gltf" rotation="0 180 0" 
-      scale="0.15 0.15 0.15" gps-entity-place="longitude: 37.192115117899725, latitude: -3.616986421217374;" animation-mixer/>
 
         <a-assets>
             <img id="my-image" src="./pikachu.jpg">
