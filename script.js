@@ -27,7 +27,7 @@ function cargarModelos() {
 	for(let i = 0; i<modelos.length; i++ ) {
 		var modelo = document.createElement('a-box');
 		modelo.setAttribute('material', 'color:'+modelos[i].color);
-		modelo.setAttribute('scale', '10 10 10');
+		modelo.setAttribute('scale', '1 1 1');
 		modelo.setAttribute('gps-entity-place', `latitude: ${modelos[i].latitud}; longitude: ${modelos[i].longitud};`);
 		let escena = document.querySelector('a-scene');
 		escena.appendChild(modelo);
