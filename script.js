@@ -18,9 +18,9 @@ function cargarModelos() {
 			color: "red"
 		},
 		{
-			latitud: 37.19226927531708,
-			longitud: -3.6166291443071054,
-			color: "green"
+			latitud: 37.192235, 
+            longitud: -3.616582,
+            color: "white"
 		}
 	]
 
