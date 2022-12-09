@@ -14,11 +14,12 @@
 </head>
 
 <body style='margin: 0; overflow: hidden;'>
+    <div id="mensaje">00</div>
     <a-scene
         vr-mode-ui="enabled: false"
 		embedded
         arjs='sourceType: webcam; sourceWidth:1280; sourceHeight:960; displayWidth: 1280; displayHeight: 960; debugUIEnabled: false;'>
         
-        <a-camera gps-camera rotation-reader></a-camera>
+        <a-camera gps-camera id='camera1' look-controls-enabled='false' arjs-look-controls='smoothingFactor: 0.1' rotation-reader></a-camera>
 	</a-scene>
 </body>
