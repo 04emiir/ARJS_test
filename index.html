@@ -165,7 +165,11 @@
 			var ARScene = document.querySelector("a-scene");
 
 			const entity = document.createElement("a-text");
-            entity.setAttribute("font", "20");
+            entity.setAttribute("scale", {
+				x: 4,
+				y: 4,
+				z: 1
+			});
 			entity.setAttribute("position", {
 				x: 0,
 				y: 10,
