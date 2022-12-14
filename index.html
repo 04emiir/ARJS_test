@@ -165,18 +165,8 @@
 			var ARScene = document.querySelector("a-scene");
 
 			const entity = document.createElement("a-text");
-            entity.setAttribute("scale", {
-				x: 4,
-				y: 4,
-				z: 1
-			});
-			entity.setAttribute("position", {
-				x: 0,
-				y: 10,
-				z: 0
-			});
             entity.setAttribute('value', 'Este es el Gymnasio');
-            entity.setAttribute('gps-new-entity-place', 'latitude: 37.19186917673344; longitude: -3.6168804181496803');
+            entity.setAttribute('gps-new-entity-place', "latitude: 37.191861048101266; longitude: -3.616880415410458");
             document.querySelector("a-scene").appendChild(entity);
 
 			/*for (let i = 0; i < ARText.length; i++) {
