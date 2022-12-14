@@ -12,12 +12,11 @@
 
 	<body style="margin: 0; overflow: hidden">
 			<a-scene vr-mode-ui='enabled: false' arjs='sourceType: webcam; videoTexture: true; debugUIEnabled: false' renderer='antialias: true; alpha: true'>
-			<a-assets>
-				<img id="futim" gps-new-entity-place="latitude: 37.19186648347383; longitude: -3.6168797495054497" src="./fut.jpg">
-			</a-assets>
+				<a-assets>
+					<img id="comicbook" crossOrigin="anonymous" src="/fut.jpg">
+				  </a-assets>
 			
-			  <!-- Using the asset management system. -->
-			<a-image width="200" height="100" gps-new-entity-place="latitude: 37.19186648347383; longitude: -3.6168797495054497" src="#futim"></a-image>
+			<a-entity layer="type: quad; src: #comicbook" gps-new-entity-place="latitude: 37.19186648347383; longitude: -3.6168797495054497" position="0 0 0"></a-entity>
 			<a-camera gps-new-camera='gpsMinDistance: 5'></a-camera>
 		</a-scene>
 	</body>
