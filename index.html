@@ -1,94 +1,217 @@
 <!DOCTYPE html>
-    <html>
-    <head>
-        <meta charset='utf-8'>
-        <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-        <title>GeoAR.js demo</title>
-        <script src='https://aframe.io/releases/0.9.2/aframe.min.js'></script>
-        <script src="https://raw.githack.com/jeromeetienne/AR.js/master/aframe/build/aframe-ar.min.js"></script>
-        <script src="https://raw.githack.com/donmccurdy/aframe-extras/master/dist/aframe-extras.loaders.min.js"></script>
-        <script>
-            THREEx.ArToolkitContext.baseURL = 'https://raw.githack.com/jeromeetienne/ar.js/master/three.js/'
-        </script>
-          <style>
-        .buttons {
-          position: absolute;
-          bottom: 0;
-          left: 0;
-          width: 100%;
-          height: 5em;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          z-index: 10;
-        }
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<title>GeoAR.js demo</title>
+		<script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+		<script type='text/javascript' src='https://raw.githack.com/AR-js-org/AR.js/master/three.js/build/ar-threex-location-only.js'></script>
+		<script type='text/javascript' src='https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js'></script>
+	</head>
 
-        .say-hi-button {
-          padding: 0.25em;
-          border-radius: 4px;
-          border: none;
-          background: white;
-          color: black;
-          width: 4em;
-          height: 2em;
-        }
-      </style>
-    </head>
+	<body style="margin: 0; overflow: hidden">
+		<a-scene vr-mode-ui='enabled: false' arjs='sourceType: webcam; videoTexture: false; debugUIEnabled: false' renderer='antialias: true; alpha: true'>
+			<a-camera gps-new-camera></a-camera>
+		</a-scene>
+	</body>
 
-    <body style='margin: 0; overflow: hidden;'>
-        <div class="buttons">
-            <button class="say-hi-button"></button>
-        </div>
-        <a-scene
-            vr-mode-ui="enabled: false"
-		    embedded
-            arjs='sourceType: webcam; sourceWidth:1280; sourceHeight:960; displayWidth: 1280; displayHeight: 960; debugUIEnabled: false;'>
-        
-            <a-camera gps-camera rotation-reader></a-camera>
-	    </a-scene>
-    </body>
-    
-    <script>
-        window.onload = () => {
-            document
-                .querySelector(".say-hi-button")
-                .addEventListener("click", function () {
-                  // here you can change also a-scene or a-entity properties, like
-                  // changing your 3D model source, size, position and so on
-                  // or you can just open links, trigger actions...
-                  cargarModelos();
-                });
-        }
+	<script>
+		window.onload = () => {
+			cargarModelos();
+		};
 
-        function cargarModelos() {
-	        //let latitud = 37.19226427531708;
-	        //let longitud = -3.6166251443071054;
-	        let modelos = [
-		        {
-			        latitud: 37.192242,
-			        longitud: -3.616585,
-			        color: "yellow"
-		        },
-		        {
-			        latitud: 37.192253,
-			        longitud: -3.616600,
-			        color: "red"
-		        },
-		        {
-			        latitud: 37.192235, 
-                    longitud: -3.616582,
-                    color: "white"
-		        }
-	        ]
+		function cargarModelos() {
+			let ARText = [
+				{
+					scale: "0.5 0.5 0.5",
+					position: "0 10 0",
+					latitude: "37.19226040110459",
+					longitude: "-3.6167509034519636",
+					value: "Salon de actos"
+				}, 
+				{
+					scale: "0.5 0.5 0.5",
+					position: "0 10 0",
+					latitude: "37.19220029643563",
+					longitude: "-3.6165349993048603",
+					value: "Gimnasio EF"
+				}, 
+				{
+					scale: "0.5 0.5 0.5",
+					position: "0 10 0",
+					latitude: "37.19204708197262",
+					longitude: "-3.6170662619376253",
+					value: "Cancha de basketball"
+				}, 
+				{
+					scale: "0.5 0.5 0.5",
+					position: "0 10 0",
+					latitude: "37.192346396934134",
+					longitude: "-3.6172604837167497",
+					value: "Clases de infromatica"
+				}, 
+				{
+					scale: "0.5 0.5 0.5",
+					position: "0 10 0",
+					latitude: "37.19186648347383",
+					longitude: "-3.6168797495054497",
+					value: "Pista de futbol"
+				},
+				{
+					scale: "0.5 0.5 0.5",
+					position: "0 10 0",
+					latitude: "37.12272329020181",
+					longitude: "-3.6117215860081475",
+					value: "Pista de futbol"
+				}
+			];
 
-	        for(let i = 0; i<modelos.length; i++ ) {
-		        var modelo = document.createElement('a-box');
-		        modelo.setAttribute('material', 'color:'+modelos[i].color);
-		        modelo.setAttribute('scale', '1 1 1');
-		        modelo.setAttribute('gps-entity-place', `latitude: ${modelos[i].latitud}; longitude: ${modelos[i].longitud};`);
-		        let escena = document.querySelector('a-scene');
-		        escena.appendChild(modelo);
-	        }
-        } 
-        </script>
+			let ARVideos = [
+				{
+					scale: "0.5 0.5 0.5",
+					position: "10 0 0",
+					latitude: "37.19226040110459",
+					longitude: "-3.6167509034519636",
+					width: "3",
+					height: "1.5",
+					source: "sumvid.mp4"
+				}, 
+				{
+					scale: "0.5 0.5 0.5",
+					position: "10 0 0",
+					latitude: "37.19220029643563",
+					longitude: "-3.6165349993048603",
+					width: "3",
+					height: "1.5",
+					source: "gymvid.mp4"
+				}, 
+				{
+					scale: "0.5 0.5 0.5",
+					position: "10 0 0",
+					latitude: "37.19204708197262",
+					longitude: "-3.6170662619376253",
+					width: "3",
+					height: "1.5",
+					source: "basketvid.mp4"
+				}, 
+				{
+					scale: "0.5 0.5 0.5",
+					position: "10 0 0",
+					latitude: "37.192346396934134",
+					longitude: "-3.6172604837167497",
+					width: "3",
+					height: "1.5",
+					source: "compuvid.mp4"
+				}, 
+				{
+					scale: "0.5 0.5 0.5",
+					position: "10 0 0",
+					latitude: "37.19186648347383",
+					longitude: "-3.6168797495054497",
+					width: "3",
+					height: "1.5",
+					source: "fotvid.mp4"
+				},
+				{
+					scale: "0.5 0.5 0.5",
+					position: "10 0 0",
+					latitude: "37.12272329020181",
+					longitude: "-3.6117215860081475",
+					width: "3",
+					height: "1.5",
+					source: "fotvid.mp4"
+				},
+			];
+
+			let ARImg = [
+				{
+					scale: "0.5 0.5 0.5",
+					position: "-10 0 0",
+					latitude: "37.19226040110459",
+					longitude: "-3.6167509034519636",
+					width: "3",
+					height: "1.5",
+					source: "actos.jpg"
+				}, 
+				{
+					scale: "0.5 0.5 0.5",
+					position: "-10 0 0",
+					latitude: "37.19220029643563",
+					longitude: "-3.6165349993048603",
+					width: "3",
+					height: "1.5",
+					source: "gym.jpg"
+				}, 
+				{
+					scale: "0.5 0.5 0.5",
+					position: "-10 0 0",
+					latitude: "37.19204708197262",
+					longitude: "-3.6170662619376253",
+					width: "3",
+					height: "1.5",
+					source: "bal.jpg"
+				}, 
+				{
+					scale: "0.5 0.5 0.5",
+					position: "-10 0 0",
+					latitude: "37.192346396934134",
+					longitude: "-3.6172604837167497",
+					width: "3",
+					height: "1.5",
+					source: "infor.jpg"
+				}, 
+				{
+					scale: "0.5 0.5 0.5",
+					position: "-10 0 0",
+					latitude: "37.19186648347383",
+					longitude: "-3.6168797495054497",
+					width: "3",
+					height: "1.5",
+					source: "fut.jpg"
+				},
+				{
+					scale: "0.5 0.5 0.5",
+					position: "-10 0 0",
+					latitude: "37.12272329020181",
+					longitude: "-3.6117215860081475",
+					width: "3",
+					height: "1.5",
+					source: "fut.jpg"
+				}
+			];
+
+			var ARScene = document.querySelector("a-scene");
+
+			for (let i = 0; i < ARText.length; i++) {
+				let AREntity = document.createElement("a-text");
+				AREntity.setAttribute("scale", ARText[i].scale);
+				AREntity.setAttribute("position", ARText[i].position);
+				AREntity.setAttribute("value", ARText[i].value);
+				AREntity.setAttribute("gps-new-entity-place", "latitude: "+ARText[i].latitude+"; longitude: "+ARText[i].longitude);
+				ARScene.appendChild(AREntity);
+			}
+
+			for (let i = 0; i < ARVideos.length; i++) {
+				let AREntity = document.createElement("a-video");
+				AREntity.setAttribute("scale", ARVideos[i].scale);
+				AREntity.setAttribute("position", ARVideos[i].position);
+				AREntity.setAttribute("width", ARVideos[i].width);
+				AREntity.setAttribute("height", ARVideos[i].height);
+				AREntity.setAttribute("src", ARVideos[i].source);
+				AREntity.setAttribute("gps-new-entity-place", "latitude: "+ARVideos[i].latitude+"; longitude: "+ARVideos[i].longitude);
+				ARScene.appendChild(ARVideos);
+			}
+
+			for (let i = 0; i < ARImg.length; i++) {
+				let AREntity = document.createElement("a-image");
+				AREntity.setAttribute("scale", ARImg[i].scale);
+				AREntity.setAttribute("position", ARImg[i].position);
+				AREntity.setAttribute("width", ARImg[i].width);
+				AREntity.setAttribute("height", ARImg[i].height);
+				AREntity.setAttribute("src", ARImg[i].source);
+				AREntity.setAttribute("gps-new-entity-place", "latitude: "+ARImg[i].latitude+"; longitude: "+ARImg[i].longitude);
+				ARScene.appendChild(AREntity);
+			}
+		}
+	</script>
 </html>
