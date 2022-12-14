@@ -162,13 +162,13 @@
 
 			var ARScene = document.querySelector("a-scene");
 
-			const entity = document.createElement("a-box");
+			const entity = document.createElement("a-text");
             entity.setAttribute("scale", {
                 x: 1, 
                 y: 1,
                 z: 1
             });
-            entity.setAttribute('material', { color: 'red' } );
+            entity.setAttribute('value', 'hello'' );
             entity.setAttribute('gps-new-entity-place', {
                 latitude: "37.19186917673344",
                 longitude: "-3.6168804181496803"
