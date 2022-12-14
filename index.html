@@ -167,6 +167,10 @@
 			const entity = document.createElement("a-text");
             entity.setAttribute('value', 'Este es el Gymnasio');
             entity.setAttribute('gps-new-entity-place', "latitude: 37.191861048101266; longitude: -3.616880415410458");
+			entity.setAttribute("look-at", "[gps-new-camera]");
+			entity.setAttribute("color", "green");
+			entity.setAttribute("scale", "10 10 10");
+			entity.setAttribute("position", "0 10 0");
             document.querySelector("a-scene").appendChild(entity);
 
 			/*for (let i = 0; i < ARText.length; i++) {
