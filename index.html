@@ -56,13 +56,6 @@
 					latitude: "37.19186648347383",
 					longitude: "-3.6168797495054497",
 					value: "Pista de futbol"
-				},
-				{
-					scale: "0.5 0.5 0.5",
-					position: "0 10 0",
-					latitude: "37.12272329020181",
-					longitude: "-3.6117215860081475",
-					value: "Pista de futbol"
 				}
 			];
 
@@ -111,16 +104,7 @@
 					width: "3",
 					height: "1.5",
 					source: "fotvid.mp4"
-				},
-				{
-					scale: "0.5 0.5 0.5",
-					position: "10 0 0",
-					latitude: "37.12272329020181",
-					longitude: "-3.6117215860081475",
-					width: "3",
-					height: "1.5",
-					source: "fotvid.mp4"
-				},
+				}
 			];
 
 			let ARImg = [
@@ -168,21 +152,24 @@
 					width: "3",
 					height: "1.5",
 					source: "fut.jpg"
-				},
-				{
-					scale: "0.5 0.5 0.5",
-					position: "-10 0 0",
-					latitude: "37.12272329020181",
-					longitude: "-3.6117215860081475",
-					width: "3",
-					height: "1.5",
-					source: "fut.jpg"
 				}
 			];
 
 			var ARScene = document.querySelector("a-scene");
+			const entity = document.createElement("a-box");
+            entity.setAttribute("scale", {
+                x: 1, 
+                y: 1,
+                z: 1
+            });
+            entity.setAttribute('material', { color: 'red' } );
+            entity.setAttribute('gps-new-entity-place', {
+                latitude: "37.19186917673344",
+                longitude: "-3.6168804181496803"
+            });
+            document.querySelector("a-scene").appendChild(entity);
 
-			for (let i = 0; i < ARText.length; i++) {
+			/*for (let i = 0; i < ARText.length; i++) {
 				let AREntity = document.createElement("a-text");
 				AREntity.setAttribute("scale", ARText[i].scale);
 				AREntity.setAttribute("position", ARText[i].position);
@@ -211,7 +198,7 @@
 				AREntity.setAttribute("src", ARImg[i].source);
 				AREntity.setAttribute("gps-new-entity-place", "latitude: "+ARImg[i].latitude+"; longitude: "+ARImg[i].longitude);
 				ARScene.appendChild(AREntity);
-			}
+			}*/
 		}
 	</script>
 </html>
