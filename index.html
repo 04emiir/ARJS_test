@@ -22,42 +22,47 @@
 		};
 
 		function cargarModelos() {
-			/*
+			
 			let ARText = [
 				{
-					scale: "0.5 0.5 0.5",
-					position: "0 10 0",
+					scale: "30 30 30",
+					position: "0 10 -10",
 					latitude: "37.19226040110459",
 					longitude: "-3.6167509034519636",
-					value: "Salon de actos"
+					color: "green",
+					value: "SALÓN DE ACTOS"
 				}, 
 				{
-					scale: "0.5 0.5 0.5",
-					position: "0 10 0",
+					scale: "30 30 30",
+					position: "0 10 -10",
 					latitude: "37.19220029643563",
 					longitude: "-3.6165349993048603",
-					value: "Gimnasio EF"
+					color: "green",
+					value: "GIMNASIO DEL AYALA"
 				}, 
 				{
-					scale: "0.5 0.5 0.5",
-					position: "0 10 0",
+					scale: "30 30 30",
+					position: "0 10 -10",
 					latitude: "37.19204708197262",
 					longitude: "-3.6170662619376253",
-					value: "Cancha de basketball"
+					color: "green",
+					value: "CANCHA DE BASKET"
 				}, 
 				{
-					scale: "0.5 0.5 0.5",
-					position: "0 10 0",
+					scale: "30 30 30",
+					position: "0 10 -10",
 					latitude: "37.192346396934134",
 					longitude: "-3.6172604837167497",
-					value: "Clases de infromatica"
+					color: "green",
+					value: "FP DE INFORMATICA"
 				}, 
 				{
-					scale: "0.5 0.5 0.5",
-					position: "0 10 0",
+					scale: "30 30 30",
+					position: "0 10 -10",
 					latitude: "37.19186648347383",
 					longitude: "-3.6168797495054497",
-					value: "Pista de futbol"
+					color: "green",
+					value: "PISTAS DE FUTBOL"
 				}
 			];
 
@@ -159,28 +164,22 @@
 				}
 			];
 
-			*/
+			
 			var ARScene = document.querySelector("a-scene");
 
-			const entity = document.createElement("a-text");
-            entity.setAttribute('value', 'Este es el Gymnasio');
-            entity.setAttribute('gps-new-entity-place', "latitude: 37.191861048101266; longitude: -3.616880415410458");
-			entity.setAttribute("look-at", "[gps-new-camera]");
-			entity.setAttribute("color", "green");
-			entity.setAttribute("scale", "20 20 20");
-			entity.setAttribute("position", "0 20 0");
 
-            document.querySelector("a-scene").appendChild(entity);
-
-			/*for (let i = 0; i < ARText.length; i++) {
+			for (let i = 0; i < ARText.length; i++) {
 				let AREntity = document.createElement("a-text");
 				AREntity.setAttribute("scale", ARText[i].scale);
 				AREntity.setAttribute("position", ARText[i].position);
+				AREntity.setAttribute("color", ARText[i].color);
 				AREntity.setAttribute("value", ARText[i].value);
+				AREntity.setAttribute("look-at", "[gps-new-camera]");
 				AREntity.setAttribute("gps-new-entity-place", "latitude: "+ARText[i].latitude+"; longitude: "+ARText[i].longitude);
 				ARScene.appendChild(AREntity);
 			}
 
+			/*
 			for (let i = 0; i < ARVideos.length; i++) {
 				let AREntity = document.createElement("a-video");
 				AREntity.setAttribute("scale", ARVideos[i].scale);
