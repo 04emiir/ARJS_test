@@ -13,8 +13,6 @@
 	<body style="margin: 0; overflow: hidden">
 		<a-scene vr-mode-ui='enabled: false' arjs='sourceType: webcam; videoTexture: true; debugUIEnabled: false' renderer='antialias: true; alpha: true'>
 			<a-camera gps-new-camera='gpsMinDistance: 5'></a-camera>
-			<a-image src="fut.jpg" height="100" width="100" gps-new-entity-place="latitude: 37.19186648347383; longitude: -3.6168797495054497"></a-image>
-			<a-video src="fotvid.mp4" height="100" width="100" gps-new-entity-place="latitude: 37.19186648347383; longitude: -3.6168797495054497"></a-video>
 		</a-scene>
 	</body>
 
@@ -27,40 +25,40 @@
 			
 			let ARText = [
 				{
-					scale: "30 30 30",
-					position: "0 10 -10",
+					scale: "10 10 0",
+					position: "0 10 20",
 					latitude: "37.19226040110459",
 					longitude: "-3.6167509034519636",
 					color: "green",
 					value: "SALON DE ACTOS"
 				}, 
 				{
-					scale: "30 30 30",
-					position: "0 10 -10",
+					scale: "10 10 0",
+					position: "0 10 20",
 					latitude: "37.192215393923895",
 					longitude: "-3.616513007858702",
 					color: "green",
 					value: "GIMNASIO DEL AYALA"
 				}, 
 				{
-					scale: "30 30 30",
-					position: "0 10 -10",
+					scale: "10 10 0",
+					position: "0 10 20",
 					latitude: "37.19204708197262",
 					longitude: "-3.6170662619376253",
 					color: "green",
 					value: "CANCHA DE BASKET"
 				}, 
 				{
-					scale: "30 30 30",
-					position: "0 10 -10",
+					scale: "10 10 0",
+					position: "0 10 20",
 					latitude: "37.192346396934134",
 					longitude: "-3.6172604837167497",
 					color: "green",
 					value: "F.P DE INFORMATICA"
 				}, 
 				{
-					scale: "30 30 30",
-					position: "0 10 -10",
+					scale: "10 10 0",
+					position: "0 10 20",
 					latitude: "37.19186648347383",
 					longitude: "-3.6168797495054497",
 					color: "green",
@@ -69,98 +67,88 @@
 			];
 
 			let ARVideos = [
-				{
-					scale: "0.5 0.5 0.5",
-					position: "10 0 0",
+			{
+					width: 20,
+					height: 10,
+					position: "20 0 20",
 					latitude: "37.19226040110459",
 					longitude: "-3.6167509034519636",
-					width: "3",
-					height: "1.5",
-					source: "sumvid.mp4"
+					src: "sumvid.mp4"
 				}, 
 				{
-					scale: "0.5 0.5 0.5",
-					position: "10 0 0",
-					latitude: "37.19220029643563",
-					longitude: "-3.6165349993048603",
-					width: "3",
-					height: "1.5",
-					source: "gymvid.mp4"
+					width: 20,
+					height: 10,
+					position: "20 0 20",
+					latitude: "37.192215393923895",
+					longitude: "-3.616513007858702",
+					src: "gymvid.mp4"
 				}, 
 				{
-					scale: "0.5 0.5 0.5",
-					position: "10 0 0",
+					width: 20,
+					height: 10,
+					position: "20 0 20",
 					latitude: "37.19204708197262",
 					longitude: "-3.6170662619376253",
-					width: "3",
-					height: "1.5",
-					source: "basketvid.mp4"
+					src: "basketvid.mp4"
 				}, 
 				{
-					scale: "0.5 0.5 0.5",
-					position: "10 0 0",
+					width: 20,
+					height: 10,
+					position: "20 0 20",
 					latitude: "37.192346396934134",
 					longitude: "-3.6172604837167497",
-					width: "3",
-					height: "1.5",
-					source: "compuvid.mp4"
+					src: "compuvid.mp4"
 				}, 
 				{
-					scale: "0.5 0.5 0.5",
-					position: "10 0 0",
+					width: 20,
+					height: 10,
+					position: "20 0 20",
 					latitude: "37.19186648347383",
 					longitude: "-3.6168797495054497",
-					width: "3",
-					height: "1.5",
-					source: "fotvid.mp4"
+					src: "fotvid.mp4"
 				}
 			];
 
 			let ARImg = [
-				{
-					scale: "0.5 0.5 0.5",
-					position: "-10 0 0",
+			{
+					width: 20,
+					height: 10,
+					position: "-20 0 20",
 					latitude: "37.19226040110459",
 					longitude: "-3.6167509034519636",
-					width: "3",
-					height: "1.5",
-					source: "actos.jpg"
+					src: "actos.jpg"
 				}, 
 				{
-					scale: "0.5 0.5 0.5",
-					position: "-10 0 0",
+					width: 20,
+					height: 10,
+					position: "-20 0 20",
 					latitude: "37.192215393923895",
 					longitude: "-3.616513007858702",
-					width: "3",
-					height: "1.5",
-					source: "gym.jpg"
+					src: "gym.jpg"
 				}, 
 				{
-					scale: "0.5 0.5 0.5",
-					position: "-10 0 0",
+					width: 20,
+					height: 10,
+					position: "-20 0 20",
 					latitude: "37.19204708197262",
 					longitude: "-3.6170662619376253",
-					width: "3",
-					height: "1.5",
-					source: "bal.jpg"
+					src: "bal.jpg"
 				}, 
 				{
-					scale: "0.5 0.5 0.5",
-					position: "-10 0 0",
+					width: 20,
+					height: 10,
+					position: "-20 0 20",
 					latitude: "37.192346396934134",
 					longitude: "-3.6172604837167497",
-					width: "3",
-					height: "1.5",
-					source: "infor.jpg"
+					src: "infor.jpg"
 				}, 
 				{
-					scale: "0.5 0.5 0.5",
-					position: "-10 0 0",
+					width: 20,
+					height: 10,
+					position: "-20 0 20",
 					latitude: "37.19186648347383",
 					longitude: "-3.6168797495054497",
-					width: "3",
-					height: "1.5",
-					source: "fut.jpg"
+					src: "fut.jpg"
 				}
 			];
 
@@ -178,28 +166,26 @@
 				ARScene.appendChild(AREntity);
 			}
 
-			/*
+			
 			for (let i = 0; i < ARVideos.length; i++) {
 				let AREntity = document.createElement("a-video");
-				AREntity.setAttribute("scale", ARVideos[i].scale);
 				AREntity.setAttribute("position", ARVideos[i].position);
 				AREntity.setAttribute("width", ARVideos[i].width);
 				AREntity.setAttribute("height", ARVideos[i].height);
-				AREntity.setAttribute("src", ARVideos[i].source);
+				AREntity.setAttribute("src", ARVideos[i].src);
 				AREntity.setAttribute("gps-new-entity-place", "latitude: "+ARVideos[i].latitude+"; longitude: "+ARVideos[i].longitude);
 				ARScene.appendChild(ARVideos);
 			}
 
 			for (let i = 0; i < ARImg.length; i++) {
 				let AREntity = document.createElement("a-image");
-				AREntity.setAttribute("scale", ARImg[i].scale);
 				AREntity.setAttribute("position", ARImg[i].position);
 				AREntity.setAttribute("width", ARImg[i].width);
 				AREntity.setAttribute("height", ARImg[i].height);
-				AREntity.setAttribute("src", ARImg[i].source);
+				AREntity.setAttribute("src", ARImg[i].src);
 				AREntity.setAttribute("gps-new-entity-place", "latitude: "+ARImg[i].latitude+"; longitude: "+ARImg[i].longitude);
 				ARScene.appendChild(AREntity);
-			}*/
+			}
 		}
 	</script>
 </html>
