@@ -13,10 +13,10 @@
 	<body style="margin: 0; overflow: hidden">
 			<a-scene vr-mode-ui='enabled: false' arjs='sourceType: webcam; videoTexture: true; debugUIEnabled: false' renderer='antialias: true; alpha: true'>
 				<a-assets>
-					<img id="comicbook" crossOrigin="anonymous" src="/fut.jpg">
+					<img id="ground" src="fut.jpg">
 				  </a-assets>
 			
-			<a-entity layer="type: quad; src: #comicbook" gps-new-entity-place="latitude: 37.19186648347383; longitude: -3.6168797495054497" position="0 0 0"></a-entity>
+				  <a-plane src="#ground" height="100" width="100" rotation="0 0 0"></a-plane>
 			<a-camera gps-new-camera='gpsMinDistance: 5'></a-camera>
 		</a-scene>
 	</body>
