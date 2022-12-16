@@ -25,90 +25,40 @@
 			
 			let ARText = [
 				{
-					scale: 
-					{
-						x: 5,
-						y: 5,
-						z: 5
-					}
-					position: 
-					{
-						x: 0,
-						y: 10,
-						z: -10
-					}
+					scale: "50 50 50",
+					position: "0 10 0",
 					latitude: "37.19226040110459",
 					longitude: "-3.6167509034519636",
 					color: "green",
 					value: "SALON DE ACTOS"
 				}, 
 				{
-					scale: 
-					{
-						x: 5,
-						y: 5,
-						z: 5
-					}
-					position: 
-					{
-						x: 0,
-						y: 10,
-						z: -10
-					}
+					scale: "50 50 50",
+					position: "0 10 0",
 					latitude: "37.192215393923895",
 					longitude: "-3.616513007858702",
 					color: "green",
 					value: "GIMNASIO DEL AYALA"
 				}, 
 				{
-					scale: 
-					{
-						x: 5,
-						y: 5,
-						z: 5
-					}
-					position: 
-					{
-						x: 0,
-						y: 10,
-						z: -10
-					}
+					scale: "50 50 50",
+					position: "0 10 0",
 					latitude: "37.19204708197262",
 					longitude: "-3.6170662619376253",
 					color: "green",
 					value: "CANCHA DE BASKET"
 				}, 
 				{
-					scale: 
-					{
-						x: 5,
-						y: 5,
-						z: 5
-					}
-					position: 
-					{
-						x: 0,
-						y: 10,
-						z: -10
-					}
+					scale: "50 50 50",
+					position: "0 10 0",
 					latitude: "37.192346396934134",
 					longitude: "-3.6172604837167497",
 					color: "green",
 					value: "F.P DE INFORMATICA"
 				}, 
 				{
-					scale: 
-					{
-						x: 5,
-						y: 5,
-						z: 5
-					}
-					position: 
-					{
-						x: 0,
-						y: 10,
-						z: -10
-					}
+					scale: "50 50 50",
+					position: "0 10 0",
 					latitude: "37.19186648347383",
 					longitude: "-3.6168797495054497",
 					color: "green",
@@ -202,8 +152,8 @@
 
 			for (let i = 0; i < ARText.length; i++) {
 				let AREntity = document.createElement("a-text");
-				AREntity.setAttribute("scale", {x: ARText[i].scale.x, y: ARText[i].scale.y, z:ARText[i].scale.z});
-				AREntity.setAttribute("position", {x: ARText[i].position.x, y: ARText[i].position.y, z:ARText[i].position.z});
+				AREntity.setAttribute("scale", ARText[i].scale);
+				AREntity.setAttribute("position", ARText[i].position);
 				AREntity.setAttribute("color", ARText[i].color);
 				AREntity.setAttribute("value", ARText[i].value);
 				AREntity.setAttribute("look-at", "[gps-new-camera]");
