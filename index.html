@@ -169,11 +169,9 @@
 			
 			for (let i = 0; i < ARVideos.length; i++) {
 				let AREntity = document.createElement("a-video");
-				AREntity.setAttribute("position", ARVideos[i].position);
 				AREntity.setAttribute("width", ARVideos[i].width);
 				AREntity.setAttribute("height", ARVideos[i].height);
 				AREntity.setAttribute("src", ARVideos[i].src);
-				AREntity.setAttribute("look-at", "[gps-new-camera]");
 				AREntity.setAttribute("gps-new-entity-place", "latitude: "+ARVideos[i].latitude+"; longitude: "+ARVideos[i].longitude);
 				ARScene.appendChild(AREntity);
 			}
