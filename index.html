@@ -26,7 +26,7 @@
 			let ARText = [
 				{
 					scale: "10 10 0",
-					position: "0 5 0",
+					position: "-100 5 0",
 					latitude: "37.19226040110459",
 					longitude: "-3.6167509034519636",
 					color: "yellow",
@@ -34,7 +34,7 @@
 				}, 
 				{
 					scale: "10 10 0",
-					position: "0 5 0",
+					position: "-100 5 0",
 					latitude: "37.192215393923895",
 					longitude: "-3.616513007858702",
 					color: "yellow",
@@ -42,7 +42,7 @@
 				}, 
 				{
 					scale: "10 10 0",
-					position: "0 5 0",
+					position: "-100 5 0",
 					latitude: "37.19204708197262",
 					longitude: "-3.6170662619376253",
 					color: "yellow",
@@ -50,7 +50,7 @@
 				}, 
 				{
 					scale: "10 10 0",
-					position: "0 5 0",
+					position: "-100 5 0",
 					latitude: "37.192346396934134",
 					longitude: "-3.6172604837167497",
 					color: "yellow",
@@ -58,7 +58,7 @@
 				}, 
 				{
 					scale: "10 10 0",
-					position: "0 5 0",
+					position: "-100 5 0",
 					latitude: "37.19186648347383",
 					longitude: "-3.6168797495054497",
 					color: "yellow",
@@ -70,7 +70,7 @@
 				{
 					width: "12",
 					height: "6",
-					position: "10 10 0",
+					position: "0 10 0",
 					latitude: "37.19226040110459",
 					longitude: "-3.6167509034519636",
 					src: "sumvid.mp4"
@@ -78,7 +78,7 @@
 				{
 					width: "12",
 					height: "6",
-					position: "10 10 0",
+					position: "0 10 0",
 					latitude: "37.192215393923895",
 					longitude: "-3.616513007858702",
 					src: "gymvid.mp4"
@@ -86,7 +86,7 @@
 				{
 					width: "12",
 					height: "6",
-					position: "10 10 0",
+					position: "0 10 0",
 					latitude: "37.19204708197262",
 					longitude: "-3.6170662619376253",
 					src: "basketvid.mp4"
@@ -94,7 +94,7 @@
 				{
 					width: "12",
 					height: "6",
-					position: "10 10 0",
+					position: "0 10 0",
 					latitude: "37.192346396934134",
 					longitude: "-3.6172604837167497",
 					src: "compuvid.mp4"
@@ -102,7 +102,7 @@
 				{
 					width: "12",
 					height: "6",
-					position: "10 10 0",
+					position: "0 10 0",
 					latitude: "37.19186648347383",
 					longitude: "-3.6168797495054497",
 					src: "fotvid.mp4"
@@ -113,7 +113,7 @@
 				{
 					width: "12",
 					height: "6",
-					position: "30 0 0",
+					position: "0 0 0",
 					latitude: "37.19226040110459",
 					longitude: "-3.6167509034519636",
 					src: "actos.jpg"
@@ -121,7 +121,7 @@
 				{
 					width: "12",
 					height: "6",
-					position: "30 0 0",
+					position: "0 0 0",
 					latitude: "37.192215393923895",
 					longitude: "-3.616513007858702",
 					src: "gym.jpg"
@@ -129,7 +129,7 @@
 				{
 					width: "12",
 					height: "6",
-					position: "30 0 0",
+					position: "0 0 0",
 					latitude: "37.19204708197262",
 					longitude: "-3.6170662619376253",
 					src: "bal.jpg"
@@ -137,7 +137,7 @@
 				{
 					width: "12",
 					height: "6",
-					position: "30 0 0",
+					position: "0 0 0",
 					latitude: "37.192346396934134",
 					longitude: "-3.6172604837167497",
 					src: "infor.jpg"
@@ -145,7 +145,7 @@
 				{
 					width: "12",
 					height: "6",
-					position: "30 0 0",
+					position: "0 0 0",
 					latitude: "37.19186648347383",
 					longitude: "-3.6168797495054497",
 					src: "fut.jpg"
@@ -161,7 +161,6 @@
 				AREntity.setAttribute("position", ARText[i].position);
 				AREntity.setAttribute("color", ARText[i].color);
 				AREntity.setAttribute("value", ARText[i].value);
-				AREntity.setAttribute("look-at", "[gps-new-camera]");
 				AREntity.setAttribute("gps-new-entity-place", "latitude: "+ARText[i].latitude+"; longitude: "+ARText[i].longitude);
 				ARScene.appendChild(AREntity);
 			}
@@ -175,7 +174,6 @@
 				AREntity.setAttribute("src", ARVideos[i].src);
 				AREntity.setAttribute("autoplay", "");
 				AREntity.setAttribute("loop", "true");
-				AREntity.setAttribute("look-at", "[gps-new-camera]");
 				AREntity.setAttribute("gps-new-entity-place", "latitude: "+ARVideos[i].latitude+"; longitude: "+ARVideos[i].longitude);
 				ARScene.appendChild(AREntity);
 			}
@@ -186,7 +184,6 @@
 				AREntity.setAttribute("width", ARImg[i].width);
 				AREntity.setAttribute("height", ARImg[i].height);
 				AREntity.setAttribute("src", ARImg[i].src);
-				AREntity.setAttribute("look-at", "[gps-new-camera]");
 				AREntity.setAttribute("gps-new-entity-place", "latitude: "+ARImg[i].latitude+"; longitude: "+ARImg[i].longitude);
 				ARScene.appendChild(AREntity);
 			}
