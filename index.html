@@ -58,7 +58,7 @@
 				}, 
 				{
 					scale: "10 10 0",
-					position: "-100 100 -100",
+					position: "0 5 0",
 					latitude: "37.19186648347383",
 					longitude: "-3.6168797495054497",
 					color: "yellow",
@@ -161,6 +161,7 @@
 				AREntity.setAttribute("position", ARText[i].position);
 				AREntity.setAttribute("color", ARText[i].color);
 				AREntity.setAttribute("value", ARText[i].value);
+				AREntity.setAttribute("align", "left");
 				AREntity.setAttribute("gps-new-entity-place", "latitude: "+ARText[i].latitude+"; longitude: "+ARText[i].longitude);
 				ARScene.appendChild(AREntity);
 			}
